@@ -20,7 +20,7 @@ constructor(props) {
   };
 }
 componentDidMount() {
-  fetch("https://nataliia-radina.github.io/react-vis-example/")
+  fetch("https://bhatmohit.github.io/dashboard-app/data.json")
       .then(response => {
           if (response.ok) {
               return  response.json()
