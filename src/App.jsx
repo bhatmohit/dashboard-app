@@ -7,8 +7,9 @@ import { BrowserRouter as Router, Link} from 'react-router-dom';
 import {Switch, Route} from 'react-router';
 import Home from './components/home';
 import Charts from './components/charts';
-//import Table from './components/table';
+import Table from './components/table';
 import Layout from './components/layout';
+import CSVReader from 'react-csv-reader';
 
 //const API_URL = "https://nataliia-radina.github.io/react-vis-example/";
 
@@ -17,10 +18,11 @@ constructor(props) {
   super(props)
   this.state = {
       results: [],
+      csvdata: [],
   };
 }
 componentDidMount() {
-  fetch("https://bhatmohit.github.io/dashboard-app/data.json")
+  fetch("https://bhatmohit.github.io/dashboard-app/data.json") //use cors-anywhere proxy to fetch from api
       .then(response => {
           if (response.ok) {
               return  response.json()
@@ -34,7 +36,22 @@ componentDidMount() {
                   return r.name === 'JavaScript';
               })
           })
-      )}
+      )
+      fetch("/data/data.csv") //use cors-anywhere proxy to fetch from api
+      .then(response => {
+          if (response.ok) {
+              return  response.json()
+          }
+          else {
+              throw new Error ('something went wrong')
+          }
+        })          
+      .then(response => this.setState({
+        csvdata: response.results
+        })
+      )
+     
+    }
   render() {
     const {results} = this.state;
     console.log(results);
@@ -71,7 +88,8 @@ return(
         {/* <Switch>    */}
        <Route exact path='/' ><Home/></Route>
        {/* <Route exact path='/charts' component={Charts}>Charts</Route> */}
-       <Route exact path='/charts'><Charts data={results}/></Route>
+       <Route exact path='/charts'><Charts data={results} csvdata={csvdata}/></Route>
+       <Route exact path='/table'><Table/></Route>
        {/* <Route></Route> */}      
        {/* </Switch> */}
    </Layout>
