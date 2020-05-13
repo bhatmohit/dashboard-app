@@ -18,7 +18,6 @@ constructor(props) {
   super(props)
   this.state = {
       results: [],
-      csvdata: [],
   };
 }
 componentDidMount() {
@@ -36,19 +35,6 @@ componentDidMount() {
                   return r.name === 'JavaScript';
               })
           })
-      )
-      fetch("/data/data.csv") //use cors-anywhere proxy to fetch from api
-      .then(response => {
-          if (response.ok) {
-              return  response.json()
-          }
-          else {
-              throw new Error ('something went wrong')
-          }
-        })          
-      .then(response => this.setState({
-        csvdata: response.results
-        })
       )
      
     }
@@ -88,7 +74,7 @@ return(
         {/* <Switch>    */}
        <Route exact path='/' ><Home/></Route>
        {/* <Route exact path='/charts' component={Charts}>Charts</Route> */}
-       <Route exact path='/charts'><Charts data={results} csvdata={csvdata}/></Route>
+       <Route exact path='/charts'><Charts data={results} /></Route>
        <Route exact path='/table'><Table/></Route>
        {/* <Route></Route> */}      
        {/* </Switch> */}
