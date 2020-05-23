@@ -19,9 +19,10 @@ class Nav extends Component {
           </Link>
         </li>
         {/* <li className="active"><a href="#home" data-nav-section="home">Introduction</a></li> */}
-        <li><a href="#UserBehaviour" data-nav-section="about">UserBehaviour</a></li>
-        <li><a href="#PieChart" data-nav-section="about">PieChart</a></li>
+        <li><a href="#UserBehaviour" data-nav-section="about">User Behaviour</a></li>
+        <li><a href="#PieChart" data-nav-section="about">Customer Category Distribution</a></li>
         <li><a href="#Density" data-nav-section="about">Density</a></li>
+        <li><a href="#CategoryScores" data-nav-section="about">Category Scores</a></li>
         {/* <li><a href="#timeline" data-nav-section="timeline">Timeline</a></li> */}
         {/* <li className={this.isPathActive('/components') || this.state.componentMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ componentMenuOpen: !this.state.componentMenuOpen })}

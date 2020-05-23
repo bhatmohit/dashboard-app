@@ -43,7 +43,7 @@ let responsiveSales = [
 const UserBehaviour = () => (
   <div className="card">
     <div className="header">
-      <h4 className="title">Users Behavior</h4>
+      <h4 className="title">User Behavior</h4>
       <p className="category"></p>
     </div>
     <div className="content">

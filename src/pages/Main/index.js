@@ -17,6 +17,7 @@ import Dashboard from '../Dashboard';
 import PieChart from '../Dashboard/PieChart';
 import Density from '../Dashboard/Density';
 import UserBehaviour from '../Dashboard/UserBehaviour';
+import CategoryScores from '../Dashboard/CategoryScores';
 import Components from '../Components';
 import UserProfile from '../UserProfile';
 import MapsPage from '../MapsPage';
@@ -56,6 +57,7 @@ const Main = ({
           <Route path="/userbehaviour" component={UserBehaviour} />
           <Route path="/piechart" component={PieChart} />
           <Route path="/density" component={Density} />
+          <Route path="/categoryscores" component={CategoryScores} />
           <Footer />
         </div>
       </div>

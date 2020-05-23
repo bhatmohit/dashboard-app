@@ -2,7 +2,7 @@ import React from 'react';
 import Density from './Density';
 import UserBehaviour from './UserBehaviour';
 import PieChart from './PieChart';
-import Tasks from './Tasks';
+import CategoryScores from './CategoryScores';
 
 const Dashboard = () => (
   <div className="content">
@@ -23,6 +23,11 @@ const Dashboard = () => (
         <div className="row">
         <div className="col-md-12">
           <Density />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-12">
+          <CategoryScores />
         </div>
       </div>
     </div>
