@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import cx from 'classnames';
 import uncheckImage from 'assets/images/checkbox-uncheck.svg';
 import checkImage from 'assets/images/checkbox-check.svg';
-import img from '../../images/Distribution of frequency.png';
-import img1 from '../../images/returnvsorderquantity.png';
+import img1 from '../../images/returnvsorderquntity.png';
 
 class CategoryScores extends Component {
   // state = {
@@ -65,6 +64,8 @@ class CategoryScores extends Component {
         </div>
         <div className="content">
           <img src={img1}></img>
+          <p>The bar chart shows the comparative numbers of quantity purchased along with number of quantity of waste material returned 
+            by every customer segments</p>
           {/* <form>
           {this.state.todos.map(todo => (
             <div className={cx("todo-item", {completed: todo.completed})} key={todo.id}>

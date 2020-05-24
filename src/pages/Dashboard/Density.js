@@ -43,7 +43,7 @@ const Density = () => {
 
         {/* <ChartistGraph data={dataPreferences} options={optionsPreferences} type={chartType} className={'ct-chart ct-perfect-fourth'} /> */}
       <img src={density} width="1200" height="400"></img>
-
+      <p>The density plot explains how the density of purchased product and return waste progresses over quantity</p>  
       </div>
       {/* <div className="footer">
         <div className="legend">

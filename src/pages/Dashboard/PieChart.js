@@ -38,6 +38,20 @@ const PieChart = () => (
     <div className="content">
       {/* <Chart data={data} options={options} responsiveOptions={responsiveOptions} type="Bar" className="ct-chart" /> */}
       <img src={piechart} width="1200" className="center"></img>
+      <p>The pie chart explains various customer segments created obtained as following:
+        <ul>
+        <li>Champions - bought recently, buy often and spend the most</li>
+        <li>Loyal Customers - spend good money and often, responsive to promotions</li>
+        <li>Potential Loyalist - recent customers, but spent a good amount and bought more than once</li>
+        <li>New Customers - bought most recently, but not often</li>
+        <li>Promising - recent shoppers, but haven’t spent much</li>
+        <li>Needing Attention - above average recency, frequency and monetary values; may not have bought very recently though</li>
+        <li>About To Sleep - below average recency, frequency and monetary values; will lose them if not reactivated</li>
+        <li>At Risk - spent big money and purchased often but long time ago; need to bring them back</li>
+        <li>Can't Loose Them - made biggest purchases, and often but haven’t returned for a long time</li>
+        <li>Hibernating - last purchase was long back, low spenders and low number of orders</li>
+      </ul>
+</p>
     </div>
     {/* <div className="footer">
       <div className="legend">
